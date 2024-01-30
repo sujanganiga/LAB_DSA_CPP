@@ -1,9 +1,23 @@
 #include<stdio.h>
 #include<conio.h>
 #include<math.h>
+#include<stdlib.h>
 #define size 5
 int queue[size];
 int f=-1,r=-1;
+void show(){
+    if(f==-1){
+        printf("queue is empty");
+    }
+    else{
+        int i;
+        for(i=f;i!=r;i=(i+1)%size){
+            printf("%d \t",queue[i]);
+        }
+        printf("%d \t",queue[i]);
+
+    }
+}
 void enqueue(int x){
     if((r==size-1&&f==0)||f==r+1){
         printf("queue is full");
@@ -33,19 +47,7 @@ void dequeue(){
         show();
     }
 }
-void show(){
-    if(f==-1){
-        printf("queue is empty");
-    }
-    else{
-        int i;
-        for(i=f;i!=r;i=(i+1)%size){
-            printf("%d \t",queue[i]);
-        }
-        printf("%d \t",queue[i]);
 
-    }
-}
 void peek(){
     if(f==-1){
         printf("queue is empty\n");
