@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<conio.h>
 #include<math.h>
 #define size 5
 int queue[size];
