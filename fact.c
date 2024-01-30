@@ -9,6 +9,6 @@ int fact(int n){
     }
 }
 int main(){
-    int temp=fact(3);
+    int temp=fact(5);
     printf("%d",temp);
 }
