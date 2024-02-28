@@ -68,7 +68,7 @@ class ta:public student,public faculty{
             cin>>total;
         }
         void displayall(){
-            cout<<"total number of students :"<<total;
+            cout<<"total number of students :"<<total<<endl;
             cout<<"faculty details :"<<endl;
             faculty::display();
         }
