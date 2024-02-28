@@ -66,7 +66,7 @@ class ta : public student, public faculty{
                 string total1;
     public:
 
-            read3(){
+        void    read3(){
                     cout<<endl<<"student details"<<endl;
                     read1();
                     cout<<endl<<"faculty details"<<endl;
@@ -79,7 +79,7 @@ class ta : public student, public faculty{
                     cin>>total1;
 
       }
-        display3(){
+        void display3(){
                      cout<<"student details"<<endl;
                     display1();
                      cout<<"faculty details"<<endl;
@@ -94,11 +94,11 @@ int main(){
   class ta ta1;
   ta1.read3();
   ta1.display3();
-  cout<<" student details :"<<endl;
-  ta1.student::read1();
-  ta1.student::display1();
-  cout<<" faculty  details :"<<endl;
-  ta1.faculty::read2();
-  ta1.faculty::display2();
+//   cout<<" student details :"<<endl;
+//   ta1.student::read1();
+//   ta1.student::display1();
+//   cout<<" faculty  details :"<<endl;
+//   ta1.faculty::read2();
+//   ta1.faculty::display2();
   }
 

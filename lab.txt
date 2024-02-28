@@ -1,0 +1,11 @@
+dobley linked list 
+two link p&n
+limt:
+ more memory utilisation
+syntax:
+    struct node{
+        int data;
+        struct node *next;
+        struct node *prev=NULL;
+    }
+

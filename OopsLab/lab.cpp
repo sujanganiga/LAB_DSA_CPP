@@ -1,3 +1,4 @@
+/*
 #include<iostream>
 #include<string>
 using namespace std;
@@ -66,4 +67,18 @@ using namespace std;
     c1.get1();
 
 
- }
+ }*/
+ // Below is C++ program
+#include <iostream>
+using namespace std;
+
+int main()
+{
+char str[20];
+fgets(str,20,stdin);
+cout<<str;
+
+
+cout << endl;
+return 0;
+}
