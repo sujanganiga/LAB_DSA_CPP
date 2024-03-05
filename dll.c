@@ -54,11 +54,14 @@ void display(){
 void delete_mid(){
         struct node * fast=head;
         struct node * slow=head;
+        //struct node * bslow=head;
         while(fast&&fast->next){
             fast=fast->next->next;
+            //bslow=slow;
             slow=slow->next;
+
         }
-        slow->prev->next=slow->next;
+        slow->prev->prev->next=slow->prev->next;
         free(slow);
     
 }
@@ -92,10 +95,14 @@ int main()
     head->prev=NULL;
     head->next=NULL;
     head->data=a;
+
+    //insert(1);
     insert(2);
     insert(3);
-    insert_before(1,5);
-    //delete_mid();
+    insert(4);
+    insert(5);
+    //insert_before(1,5);
+    delete_mid();
     display();
 
 

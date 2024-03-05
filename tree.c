@@ -38,8 +38,8 @@ void inorder(struct node * root){
 void postorder(struct node * root){
     //printf("worked");
     if(root){
-        inorder(root->left);
-        inorder(root->right);
+        postorder(root->left);
+        postorder(root->right);
         printf("%d",root->val);
 
     }
@@ -48,17 +48,21 @@ void preorder(struct node * root){
     //printf("worked");
     if(root){
         printf("%d",root->val);
-        inorder(root->left);
-        inorder(root->right);
+        preorder(root->left);
+        preorder(root->right);
     }
 }
 int main(){
-    root=(struct node*)malloc(sizeof(struct node));
-    root->val=4;
-    root->left=NULL;
-    root->right=NULL;
-    insert(root,2);
-    insert(root,3);
+    //root=(struct node*)malloc(sizeof(struct node));
+     //root->val=1;
+    //root->left=NULL;
+    //root->right=NULL;
+    root=insert(root,6);
+    root=insert(root,3);
+    root=insert(root,2);
+    root=insert(root,4);
+    root=insert(root,9);
+    root=insert(root,10);
     // insert(root,90);
     // insert(root,80);
     // insert(root,200);
